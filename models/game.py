@@ -13,7 +13,14 @@ class Game:
         for player in self.players:
             if player.choice == "rock" or player.choice == "paper" or player.choice == "scissors":
                 return True
-            return False       
+            return False
+
+    def check_choice(self):
+            if self.players[choice][0] == "rock" or self.players.choice[0] == "paper" or self.players.choice[0] == "scissors":
+                if self.players.choice[1] == "rock" or self.players.choice[1] == "paper" or self.players.choice[1] == "scissors":
+                    return True
+                return False
+            return False          
 
     def game_outcome(self):
         if self.check_choice() == True:

@@ -3,6 +3,11 @@
     <title>Who wins?</title>
 </head>
 <body>
+    {% for player in players %}
+    <p>Player 1 has chosen {{player.choice}}</p>
+    <p>Player 2 has chosen {{player.choice}}</p>
+    {% endfor %}
+    <hr>
     <p>{{rps.game_outcome()}}</p>
 </body>
 

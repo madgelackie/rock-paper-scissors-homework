@@ -11,9 +11,10 @@ def wecome_page():
 def outcome(weapon1, weapon2):
     player1 = Player("player_uno", weapon1)
     player2 = Player("player_deux", weapon2)
+    players = [player1, player2]
     rps = Game("RPS", [])
     rps.add_player(player1)
     rps.add_player(player2)
     rps.game_outcome()
     # So now I need to get the output of game_outcome to be taken in by the index.html file to determine it's output
-    return render_template("index.html", rps=rps)
+    return render_template("index.html", players=players, rps=rps)
