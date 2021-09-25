@@ -9,29 +9,28 @@ class Game:
     def add_player(self, player):
         self.players.append(player)
 
-    def check_choice(self):
+    def player_choices_list(self):
+        player_choices = []
         for player in self.players:
-            if player.choice == "rock" or player.choice == "paper" or player.choice == "scissors":
-                return True
-            return False
+            player_choices.append(player.choice)
+        return (player_choices)
 
     def check_choice(self):
-            if self.players[choice][0] == "rock" or self.players.choice[0] == "paper" or self.players.choice[0] == "scissors":
-                if self.players.choice[1] == "rock" or self.players.choice[1] == "paper" or self.players.choice[1] == "scissors":
+            if self.players[0].choice == "rock" or self.players[0].choice == "paper" or self.players[0].choice == "scissors":
+                if self.players[1].choice == "rock" or self.players[1].choice == "paper" or self.players[1].choice == "scissors":
                     return True
-                return False
-            return False          
+            return False 
 
     def game_outcome(self):
         if self.check_choice() == True:
             if self.players[0].choice == "rock" and self.players[1].choice == "scissors":
-                return "Player1 wins with rock"
+                return "Player 1 wins with rock"
             if self.players[0].choice == "paper" and self.players[1].choice == "rock":
-                return "Player1 wins with paper"
+                return "Player 1 wins with paper"
             if self.players[0].choice == "scissors" and self.players[1].choice == "paper":
-                return "Player1 wins with scissors"
+                return "Player 1 wins with scissors"
             if self.players[0].choice == self.players[1].choice:
                 return "It's a draw!"
-            return f"Player2 wins with {self.players[1].choice}"
+            return f"Player 2 wins with {self.players[1].choice}"
         return "Oops, invalid choice. Only use rock, paper or scissors. Try again."
 

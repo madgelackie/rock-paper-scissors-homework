@@ -1,15 +1,12 @@
-<html>
-<head>
-    <title>Who wins?</title>
-</head>
-<body>
-    {% for player in players %}
-    <p>Player 1 has chosen {{player.choice}}</p>
-    <p>Player 2 has chosen {{player.choice}}</p>
-    {% endfor %}
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+    <p>Player 1 has chosen {{rps.players[0].choice}}</p>
+    <p>Player 2 has chosen {{rps.players[1].choice}}</p>
     <hr>
     <p>{{rps.game_outcome()}}</p>
-</body>
+    </div>  
+{% endblock %}
 
-</html>
 
