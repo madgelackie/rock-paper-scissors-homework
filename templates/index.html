@@ -1,13 +1,9 @@
 <html>
 <head>
-    <title>RPS</title>
+    <title>Who wins?</title>
 </head>
 <body>
-
-    <p>Is this working?</p>
-    {% for player in players %}
-    <p>{{player.choice}}</p>
-    {% endfor %}
+    <p>{{rps.game_outcome()}}</p>
 </body>
 
 </html>

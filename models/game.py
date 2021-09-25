@@ -1,17 +1,30 @@
-# class Game:
+from models.player import Player
 
-#     def __init__(self, name):
-#         self.name = name
+class Game:
 
+    def __init__(self, name, players):
+        self.name = name
+        self.players = []
 
-def game_outcome(weapon1, weapon2):
-    if weapon1 == "rock" and weapon2 == "scissors":
-        return "weapon1 wins"
-    if weapon1 == "paper" and weapon2 == "rock":
-        return "weapon1 wins"
-    if weapon1 == "scissors" and weapon2 == "paper":
-        return "weapon1 wins"
-    if weapon1 == weapon2:
-        return "no one wins"
-    return "weapon 2 wins"
+    def add_player(self, player):
+        self.players.append(player)
+
+    def check_choice(self):
+        for player in self.players:
+            if player.choice == "rock" or player.choice == "paper" or player.choice == "scissors":
+                return True
+            return False       
+
+    def game_outcome(self):
+        if self.check_choice() == True:
+            if self.players[0].choice == "rock" and self.players[1].choice == "scissors":
+                return "Player1 wins with rock"
+            if self.players[0].choice == "paper" and self.players[1].choice == "rock":
+                return "Player1 wins with paper"
+            if self.players[0].choice == "scissors" and self.players[1].choice == "paper":
+                return "Player1 wins with scissors"
+            if self.players[0].choice == self.players[1].choice:
+                return "It's a draw!"
+            return f"Player2 wins with {self.players[1].choice}"
+        return "Oops, invalid choice. Only use rock, paper or scissors. Try again."
 
