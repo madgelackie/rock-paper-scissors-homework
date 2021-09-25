@@ -1,9 +1,8 @@
 import unittest
-from models.game import *
-from models.player import *
 
-import unittest
-from src.task import Task
+from game import Game
+from player import Player
+
 
 class TestTask(unittest.TestCase):
 
