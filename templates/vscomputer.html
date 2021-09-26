@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <p>You chose {{rps.players[0].choice}}</p>
+    <p>Your imaginary friend chose {{rps.players[1].choice}}</p>
+   
+    <h3>{{rps.game2_outcome()}}</h3>
+{% endblock %}
+</div>
+    
