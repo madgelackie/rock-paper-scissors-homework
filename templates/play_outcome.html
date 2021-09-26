@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+    <p>You chose {{rps.players[0].choice}}</p>
+    <p>The computer chose {{rps.players[1].choice}}</p>
+    <hr>
+    <p>{{rps.game2_outcome()}}</p>
+    <form action="/play">
+        <button>Play again</button>
+    </form>    
+</div>  
+
+{% endblock %}

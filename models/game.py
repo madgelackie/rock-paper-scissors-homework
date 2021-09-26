@@ -34,3 +34,15 @@ class Game:
             return f"Player 2 wins with {self.players[1].choice}"
         return "Oops, invalid choice. Only use rock, paper or scissors. Try again."
 
+    def game2_outcome(self):
+            if self.check_choice() == True:
+                if self.players[0].choice == "rock" and self.players[1].choice == "scissors":
+                    return "You win with rock"
+                if self.players[0].choice == "paper" and self.players[1].choice == "rock":
+                    return "You win with paper"
+                if self.players[0].choice == "scissors" and self.players[1].choice == "paper":
+                    return "You win with scissors"
+                if self.players[0].choice == self.players[1].choice:
+                    return "It's a draw!"
+                return f"The computer wins with {self.players[1].choice}"
+            return "Oops, invalid choice. Only use rock, paper or scissors. Try again."
