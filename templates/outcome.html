@@ -1,15 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
+<section class="main-box">
     <div>
-    <p>Player 1 has chosen {{rps.players[0].choice}}</p>
-    <p>Player 2 has chosen {{rps.players[1].choice}}</p>
-    <hr>
-    <p>{{rps.game_outcome()}}</p>
+        <p>Player 1 has chosen {{rps.players[0].choice}}</p>
+        <p>Player 2 has chosen {{rps.players[1].choice}}</p>
+        <hr>
+        <p>{{rps.game_outcome()}}</p>
     </div>  
         <form action="/">
         <button>Play again</button>
         </form>  
+</section>        
 {% endblock %}
 
 

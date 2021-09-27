@@ -1,18 +1,19 @@
 <html>
 <head>
-    <title>{{ title }}</title>
+    <title>{{ title }} </title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 </head>  
 <body>
-    <div>
-        <h1>Rock, Paper, Scissors</h1>
-        <nav>
+    <section id="shared">
+        <nav class="child-nav">
             <ul>
                 <li><a href="/">Rules</a></li>
                 <li><a href="/play">Play against computer</a></li>
             </ul>
         </nav>
-        <hr>
-    </div>
+        <h1 class="child">Rock Paper Scissors</h1>
+    </section>
+    <hr>
     {% block content %}{% endblock %}
 </body>
 

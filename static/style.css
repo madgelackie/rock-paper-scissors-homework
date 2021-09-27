@@ -1,0 +1,17 @@
+#shared{
+    display: flex;
+    color: coral;
+    justify-content: flex-start;
+    align-items: flex-end
+}
+
+.child-nav > ul > li{
+    list-style: none;
+
+}
+
+.child{
+    margin-left: 50px;
+    font-size: 40
+}
+
